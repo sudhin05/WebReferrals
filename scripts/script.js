@@ -1,5 +1,5 @@
-
-function initSliders() {
+document.addEventListener('DOMContentLoaded', () => {
+  
     document.querySelectorAll('.Horizontal-slider').forEach(slider => {
         const prevBtn = slider.querySelector('.prev');
         const nextBtn = slider.querySelector('.next');
@@ -13,7 +13,7 @@ function initSliders() {
             track.scrollBy({ left: 200, behavior: 'smooth' });
         });
 
-        // // Touch/mouse drag functionality
+      
         // let isDown = false;
         // let startX;
         // let scrollLeft;
@@ -40,7 +40,17 @@ function initSliders() {
         //     track.scrollLeft = scrollLeft - walk;
         // });
     });
-}
 
-
-document.addEventListener('DOMContentLoaded', initSliders);
+    document.querySelectorAll('.company-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+                return;
+            }
+            
+            const companyId = card.getAttribute('data-company');
+            window.location.href = `company-pages/${companyId}.html`;
+        });
+   
+        card.style.cursor = 'pointer';
+    });
+});

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amazon Referral</title>
+  <link rel="stylesheet" href="../styles/company-page.css" />
+</head>
+<body>
+  <header>
+    <h1>Nav bar</h1>
+  </header>
+
+  <main class="brand-container">
+    <div class="brand-info">
+      <div class="brand-text">
+        <h1>Amazon</h1>
+        <p>Get discounts on your first Amazon purchase</p>
+      </div>
+      <div class="brand-logo">
+        <img src="../images/amazon_logo.jpg" alt="Amazon Logo" />
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-left">
+        <div class="rating-value">4.5</div>
+        <div class="stars">
+          ★★★★
+        </div>
+        <div class="short-desc">Trusted by 5000+ users</div>
+      </div>
+      <div class="divider"></div>
+      <div class="info-right">
+        <div class="verified">
+          <span class="checkmark">✔</span>
+          <span class="verified-text">Verified Publisher</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="referral-code-section">
+      <h3>Referral Code:</h3>
+      <div class="code-box">
+        <span id="code">AMAZON10</span>
+        <button onclick="copyCode()">Copy</button>
+      </div>
+    </div>
+    <div class="how-to-use">
+      <h3>How to Use</h3>
+      <ol>
+        <li>Visit <a href="https://amazon.com" target="_blank">Amazon.com</a></li>
+        <li>Sign up using your email or phone number</li>
+        <li>Enter referral code <strong>AMAZON10</strong> during checkout</li>
+      </ol>
+    </div>
+  </main>
+
+  <script>
+    function copyCode() {
+      const code = document.getElementById('code').textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        alert('Referral code copied: ' + code);
+      });
+    }
+  </script>
+</body>
+</html>
