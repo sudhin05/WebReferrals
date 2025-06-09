@@ -1,5 +1,5 @@
-id,name,logo,offer,code,rating,users,website,description
-amazon,Amazon,images/amazon_logo.jpg,10% off first purchase,AMAZON10,4.5,5000,https://amazon.com,Get discounts on your first Amazon purchase
-trip.com,trip,images/trip.com.jpg,get exclusive discounts when use thi refferal,"179993F5FFF4B9160E65635EFED4D2DD",4.8,15k+,www.trip.com,"Earn rewards by using refferal coupon to Trip.com! Get bonus discounts when they book their first trip."
-swiggy,swiggy,images/swiggy.jpg,get 90 bucks + free delivery,10462BB,4.7,100k+,www.swiggy.com,"Found an amazing deal for you. Rs90 off & Free Delivery on your first order from Swiggy"
-eatclub,eatclub,images/eatclub.jpg,get ₹200 OFF on first 3 orders,UDAY436NJK,4.9,20k+,www.eatclub.com,"get 30% Off EVERYTIME. ZERO Delivery/ Packaging Fees. BEST OFFER:get ₹200 OFF on first 3 orders."
+id,name,logo,offer,code,rating,users,website,description,tags,category
+amazon,Amazon,images/amazon_logo.jpg,10% off first purchase,AMAZON10,4.5,5000,https://amazon.com,Get discounts on your first Amazon purchase ,retail,food
+trip.com,Trip,images/trip.com.jpg,get exclusive discounts when use thi refferal,"179993F5FFF4B9160E65635EFED4D2DD",4.8,15k+,www.trip.com,"Earn rewards by using refferal coupon to Trip.com! Get bonus discounts when they book their first trip.",travel,food
+swiggy,Swiggy,images/swiggy.jpg,get 90 bucks + free delivery,10462BB,4.7,100k+,www.swiggy.com,"Found an amazing deal for you. Rs90 off & Free Delivery on your first order from Swiggy",food delivery,food
+eatclub,Eatclub,images/eatclub.jpg,get ₹200 OFF on first 3 orders,UDAY436NJK,4.9,20k+,www.eatclub.com,"get 30% Off EVERYTIME. ZERO Delivery/ Packaging Fees. BEST OFFER:get ₹200 OFF on first 3 orders.",food delivery,food

@@ -55,12 +55,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.querySelectorAll('.faq-question').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const item = this.parentElement;
-    item.classList.toggle('active');
-    document.querySelectorAll('.faq-item').forEach(i => {
-      if(i !== item) i.classList.remove('active');
+// FAQ Accordion Functionality
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.parentNode;
+        const isActive = item.classList.contains('active');
+        
+    
+        document.querySelectorAll('.faq-item').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+    
+        if (!isActive) {
+            item.classList.add('active');
+        }
     });
-  });
 });

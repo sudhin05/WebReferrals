@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>eatclub Referral</title>
+  <title>Eatclub Referral</title>
   <link rel="stylesheet" href="../styles/company-page.css" />
 </head>
 <body>
@@ -24,11 +24,11 @@
   <main class="brand-container">
     <div class="brand-info">
       <div class="brand-text">
-        <h1>eatclub</h1>
+        <h1>Eatclub</h1>
         <p>get 30% Off EVERYTIME. ZERO Delivery/ Packaging Fees. BEST OFFER:get ₹200 OFF on first 3 orders.</p>
       </div>
       <div class="brand-logo">
-        <img src="../images/eatclub.jpg" alt="eatclub Logo" />
+        <img src="../images/eatclub.jpg" alt="Eatclub Logo" />
       </div>
     </div>
 
@@ -36,7 +36,7 @@
       <div class="info-left">
         <div class="rating-value">4.9</div>
         <div class="stars">
-          ★★★★½
+          ★★★★&#x260E
         </div>
         <div class="short-desc">Trusted by 20k++ users</div>
       </div>
@@ -64,7 +64,68 @@
         <li>Enter referral code <strong>UDAY436NJK</strong> during checkout</li>
       </ol>
     </div>
-  </main>
+  
+                
+<section class="related-referrals">
+  <h3>More in food</h3>
+  <div class="related-slider">
+    <button class="slider-button prev">‹</button>
+    <div class="slider-track">
+      
+<div class="related-company-card" onclick="window.location.href='amazon.html'">
+  <div class="related-logo">
+    <img src="../images/amazon_logo.jpg" alt="Amazon">
+  </div>
+  <div class="related-info">
+    <h4>Amazon</h4>
+    <p class="related-offer">10% off first purchase</p>
+  </div>
+</div>
+
+<div class="related-company-card" onclick="window.location.href='trip.com.html'">
+  <div class="related-logo">
+    <img src="../images/trip.com.jpg" alt="Trip">
+  </div>
+  <div class="related-info">
+    <h4>Trip</h4>
+    <p class="related-offer">get exclusive discounts when use thi refferal</p>
+  </div>
+</div>
+
+<div class="related-company-card" onclick="window.location.href='swiggy.html'">
+  <div class="related-logo">
+    <img src="../images/swiggy.jpg" alt="Swiggy">
+  </div>
+  <div class="related-info">
+    <h4>Swiggy</h4>
+    <p class="related-offer">get 90 bucks + free delivery</p>
+  </div>
+</div>
+
+    </div>
+    <button class="slider-button next">›</button>
+  </div>
+</section>
+
+<style>
+  .related-referrals {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+  }
+  .related-referrals h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2b2d42;
+  }
+  /* Reuse your existing slider styles */
+</style>
+
+
+
+
+        
+            </main>
 
   <script>
     function copyCode() {
@@ -73,6 +134,22 @@
         alert('Referral code copied: ' + code);
       });
     }
+       document.querySelectorAll('.related-slider').forEach(slider => {
+    const track = slider.querySelector('.slider-track');
+    const prev = slider.querySelector('.prev');
+    const next = slider.querySelector('.next');
+    
+    prev.addEventListener('click', () => {
+      track.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+    
+    next.addEventListener('click', () => {
+      track.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+  });
   </script>
+ 
+  
 </body>
+
 </html>

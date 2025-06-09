@@ -78,22 +78,25 @@ const companyTemplate = `<!DOCTYPE html>
         alert('Referral code copied: ' + code);
       });
     }
+       document.querySelectorAll('.related-slider').forEach(slider => {
+    const track = slider.querySelector('.slider-track');
+    const prev = slider.querySelector('.prev');
+    const next = slider.querySelector('.next');
+    
+    prev.addEventListener('click', () => {
+      track.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+    
+    next.addEventListener('click', () => {
+      track.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+  });
   </script>
+ 
+  
 </body>
+
 </html>`;
-
-const popularCardTemplate = (company) => `
-<div class="company-card" data-company="${company.id}">
-  <div class="grid-image">
-    <img src="../${company.logo}" alt="${company.name}" loading="lazy">
-  </div>
-  <div class="grid-text">
-    <h4>${company.name}</h4>
-    <p>${company.offer}</p>
-  </div>
-</div>
-`;
-
 
 function generateStars(rating) {
   const numericRating = parseFloat(rating);
@@ -115,13 +118,86 @@ async function readCSV(filePath) {
   });
 }
 
-// Generate all company pages
+
+
+const relatedReferralsTemplate = `
+<section class="related-referrals">
+  <h3>More in {{category}}</h3>
+  <div class="related-slider">
+    <button class="slider-button prev">‹</button>
+    <div class="slider-track">
+      {{relatedCards}}
+    </div>
+    <button class="slider-button next">›</button>
+  </div>
+</section>
+
+<style>
+  .related-referrals {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+  }
+  .related-referrals h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2b2d42;
+  }
+  /* Reuse your existing slider styles */
+</style>
+
+
+
+`;
+
+// Related company card template
+const relatedCardTemplate = `
+<div class="related-company-card" onclick="window.location.href='{{id}}.html'">
+  <div class="related-logo">
+    <img src="../{{logo}}" alt="{{name}}">
+  </div>
+  <div class="related-info">
+    <h4>{{name}}</h4>
+    <p class="related-offer">{{offer}}</p>
+  </div>
+</div>
+`;
+
+// Find related companies by category
+function getRelatedCompanies(currentCompany, allCompanies) {
+  return allCompanies
+    .filter(company => 
+      company.id !== currentCompany.id && 
+      company.category === currentCompany.category
+    )
+    .slice(0, 6); // Get max 6 related companies
+}
+
+// Generate HTML for related companies
+function generateRelatedCards(relatedCompanies) {
+  return relatedCompanies.map(company => 
+    relatedCardTemplate
+      .replace(/{{id}}/g, company.id)
+      .replace(/{{name}}/g, company.name)
+      .replace(/{{logo}}/g, company.logo)
+      .replace(/{{offer}}/g, company.offer)
+  ).join('');
+}
+
+// Modified company page generation
 async function generateCompanyPages(companies) {
   if (!fs.existsSync(path.join(__dirname, '../company-pages'))) {
     fs.mkdirSync(path.join(__dirname, '../company-pages'));
   }
 
   await Promise.all(companies.map(async (company) => {
+    const relatedCompanies = getRelatedCompanies(company, companies);
+    const relatedCardsHTML = generateRelatedCards(relatedCompanies);
+    
+    const relatedSection = relatedReferralsTemplate
+      .replace(/{{category}}/g, company.category)
+      .replace(/{{relatedCards}}/g, relatedCardsHTML);
+
     const html = companyTemplate
       .replace(/{{name}}/g, company.name)
       .replace(/{{logo}}/g, company.logo)
@@ -131,93 +207,40 @@ async function generateCompanyPages(companies) {
       .replace(/{{users}}/g, company.users)
       .replace(/{{code}}/g, company.code)
       .replace(/{{website}}/g, company.website)
-      .replace(/{{offer}}/g, company.offer);
+      // .replace(/<\/main>/g, `${relatedSection}</main>`)
+
+      .replace(/<\/main>/g, `
+                ${relatedSection}
+        
+            </main>`);; // Inject before closing main
 
     const filePath = path.join(__dirname, `../company-pages/${company.id}.html`);
     await fs.promises.writeFile(filePath, html);
   }));
 }
 
-// Update index.html with popular companies
-async function updateIndexWithPopular(companies, popularList) {
-  const indexPath = path.join(__dirname, '../index.html');
-  let indexContent = await fs.promises.readFile(indexPath, 'utf8');
-  
-  // Filter and sort popular companies
-  const popularCompanies = popularList
-    .map(p => companies.find(c => c.id === p.id))
-    .filter(Boolean)
-    .sort((a, b) => {
-      const aOrder = popularList.find(p => p.id === a.id)?.order || 0;
-      const bOrder = popularList.find(p => p.id === b.id)?.order || 0;
-      return aOrder - bOrder;
-    });
-
-  // Generate popular cards HTML
-  const popularHTML = popularCompanies.map(popularCardTemplate).join('');
-  
-  // Update all slider-track sections
-  indexContent = indexContent.replace(
-    /<div class="slider-track">([\s\S]*?)<\/div>/g,
-    `<div class="slider-track">${popularHTML}</div>`
-  );
-  
-  await fs.promises.writeFile(indexPath, indexContent);
-}
-
-// Main generation function
 async function generateAll() {
   try {
     console.log('Starting generation...');
     const [companies, popularList] = await Promise.all([
       readCSV(path.join(__dirname, '../data/companies.csv')),
-      readCSV(path.join(__dirname, '../data/popular.csv'))
+      // readCSV(path.join(__dirname, '../data/popular.csv'))
     ]);
 
     await Promise.all([
-      generateCompanyPages(companies),
-      updateIndexWithPopular(companies, popularList)
+      generateCompanyPages(companies)
     ]);
 
     console.log(`Successfully generated:
 - ${companies.length} company pages
-- Updated popular section with ${popularList.length} companies`);
+`);
   } catch (error) {
     console.error('Generation failed:', error);
   }
 }
+generateAll()
 
-// File watcher for development
-function setupWatcher() {
-  const watcher = chokidar.watch([
-    path.join(__dirname, '../data/companies.csv'),
-    path.join(__dirname, '../data/popular.csv'),
-    path.join(__dirname, '../index.html')
-  ], {
-    ignoreInitial: true,
-    persistent: true
-  });
 
-  watcher.on('change', (filePath) => {
-    console.log(`\nFile changed: ${path.basename(filePath)}`);
-    generateAll();
-  });
-
-  watcher.on('error', error => {
-    console.error('Watcher error:', error);
-  });
-
-  console.log('Watching files for changes...');
-}
-
-// Run immediately and watch in development
-generateAll().then(() => {
-  if (process.env.NODE_ENV !== 'production') {
-    setupWatcher();
-  }
-});
-
-// Export for potential CLI usage
 module.exports = { generateAll };
 
 

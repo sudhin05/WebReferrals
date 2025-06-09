@@ -1,0 +1,229 @@
+/* Main Layout */
+
+.search-header{
+    align-items: center;
+}
+.search-box {
+    display: flex;
+    max-width: 5100px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+    flex: 1;
+    height: 50px;
+    align-self: center;
+    /* align-items: center; */
+    /* width: ; */
+    border: none;
+    border-radius: 8px 0 0 8px;
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.search-box button {
+    width: 120px;
+    height: 50px;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background-color: #3a86ff;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #2667cc;
+}
+
+.search-results-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.search-header {
+    background: #f5f5f5;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Filters Sidebar */
+.filters-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.filter-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.filter-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.filter-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-section li {
+    margin-bottom: 10px;
+}
+
+.filter-section label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filter-section input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.rating-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rating-option {
+    color: #FFA41C;
+    cursor: pointer;
+}
+
+.price-slider {
+    padding: 0 10px;
+}
+
+.price-slider input {
+    width: 100%;
+}
+
+.price-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Results Grid */
+.results-grid {
+    flex: 1;
+}
+
+.results-header {
+    margin-bottom: 20px;
+}
+
+.results-header h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #333;
+}
+
+.results-count {
+    color: #666;
+    font-size: 14px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Company Card - Updated to match your theme */
+.company-result-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.company-result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.company-logo {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.company-logo img {
+    max-width: 120px;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.company-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2b2d42;
+}
+
+.company-offer {
+    color: #3a86ff;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.company-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.company-rating {
+    color: #FFA41C;
+    margin-bottom: 10px;
+}
+
+.view-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #3a86ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.view-button:hover {
+    background: #2667cc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search-results-container {
+        flex-direction: column;
+    }
+    
+    .filters-sidebar {
+        width: 100%;
+        order: 2;
+    }
+}
