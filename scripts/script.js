@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const track = slider.querySelector('.slider-track');
 
         prevBtn.addEventListener('click', () => {
-            track.scrollBy({ left: -200, behavior: 'smooth' });
+            track.scrollBy({ left: -600, behavior: 'smooth' });
         });
 
         nextBtn.addEventListener('click', () => {
-            track.scrollBy({ left: 200, behavior: 'smooth' });
+            track.scrollBy({ left: 600, behavior: 'smooth' });
         });
 
       
