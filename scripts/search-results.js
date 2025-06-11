@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!query) return allCompanies;
         
         return allCompanies.filter(company => {
-            const searchText = `${company.name} ${company.description} ${company.offer}`.toLowerCase();
+            const searchText = `${company.name} ${company.description} ${company.offer}${company.tags}}${company.category}`.toLowerCase();
             return searchText.includes(query.toLowerCase());
         });
     }
