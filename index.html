@@ -42,7 +42,14 @@
                     <input type="text" placeholder="Search for companies..." id="mainSearchInput">
                     <button type="submit">Search</button>
                 </form>
-
+                <!-- Google Analytics -->
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M60XM378PP"></script>
+                    <script>
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+                      gtag('config', 'G-M60XM378PP');
+                    </script>
                 <script>
                     document.getElementById('mainSearchForm').addEventListener('submit', (e) => {
                         e.preventDefault();
