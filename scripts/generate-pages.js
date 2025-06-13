@@ -9,6 +9,7 @@ const companyTemplate = `<!DOCTYPE html>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>{{name}} Referral</title>
+  
   <link rel="stylesheet" href="../styles/company-page.css" />
 </head>
 <body>
