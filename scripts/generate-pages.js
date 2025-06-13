@@ -13,17 +13,25 @@ const companyTemplate = `<!DOCTYPE html>
 </head>
 <body>
  <header>
-    <div class="container">
-        <h1 class="logo">WebReferrals</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Referees</a></li>
-            </ul>
-        </nav>
-    </div>
+     <div class="container">
+            <h1 class="logo">WebReferrals</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                    <a href="../about-us/our-team.html">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../about-us/our-team.html">Our Team</a></li>
+                        <li><a href="../about-us/contact-us.html">Contact Us</a></li>
+                    </ul>
+        </li>
+                    <!-- <li><a href="#">Features</a></li> -->
+                    <!-- <li><a href="#">Categories</a></li> -->
+                    <!-- <li><a href="#">Referees</a></li> -->
+                     <li><a href="#">Blogs</a></li>
+                </ul>
+            </nav>
+        </div>
 </header>
 
   <main class="brand-container">
