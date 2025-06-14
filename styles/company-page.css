@@ -334,3 +334,102 @@ nav a:hover {
     right: 0;
 }
 
+
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    /* padding-bottom: 12px; */
+  }
+  
+  nav ul li {
+    margin: 5px 0;
+  }
+  
+  .logo {
+    margin-bottom: 10px;
+    text-align: center;
+    
+  }
+ 
+
+  .hero1 {
+    padding: 30px 0;
+  }
+  
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
+  .hero-content {
+    padding-right: 0;
+    max-width: 100%;
+  }
+  
+  .hero-image img {
+    max-height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .search-box {
+    height: 115px;
+    flex-direction: column;
+    max-width: 100%;
+    /* width: 100px; */
+  }
+  
+  .search-box input {
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .search-box button {
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .stat-item {
+    margin-bottom: 10px;
+  }
+   body {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  .Horizontal-slider {
+    padding: 0 15px;
+  }
+  
+  .company-card {
+    min-width: 150px;
+    height: 200px;
+    padding: 15px;
+  }
+  
+  .grid-image img {
+    width: 60px;
+    height: 60px;
+  }
+}
