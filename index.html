@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebReferrals</title>
+    <link rel="stylesheet" href="styles/indexPage.css">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container">
+            <h1 class="logo">WebReferrals</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown">
+                    <a href="../about-us/our-team.html">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../about-us/our-team.html">Our Team</a></li>
+                        <li><a href="../about-us/contact-us.html">Contact Us</a></li>
+                    </ul>
+        </li>
+                    <!-- <li><a href="#">Features</a></li> -->
+                    <!-- <li><a href="#">Categories</a></li> -->
+                    <!-- <li><a href="#">Referees</a></li> -->
+                     <li><a href="#">Blogs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+      
+        <section class="hero1">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h2>Get Referral Codes to Popular Websites</h2>
+            <p class="subtitle">Share Referrals, leave reviews and Earn rewards with our trusted community</p>
+            <form class="search-box" id="mainSearchForm">
+                <input type="text" placeholder="Search for companies..." id="mainSearchInput">
+                <button type="submit">Search</button>
+            </form>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">1,000+</span>
+                    <span class="stat-label">Referrals</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Companies</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10,000+</span>
+                    <span class="stat-label">Users</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://illustrations.popsy.co/amber/digital-nomad.svg" alt="Referral illustration" class="feature-img">
+        </div>
+    </div>
+</section>
+        <!-- 
+            1. Search Bar
+            2. Horizontal Scroll for the Top Companies
+            3. Filter by Company Category
+            4. How It Works
+            5. Why Choose Us
+            6. FAQs
+            
+            -->
+            
+            
+            <!-- referral companies slider -->
+         
+  <section class="hero2">
+    <div class="hero-section">
+        <h2>Popular Referrals</h2>
+        <p>Browse most frequently used referrals</p>
+        
+        <div class="Horizontal-slider">
+            <button class="slider-button prev">‹</button>
+            
+            <div class="slider-track">
+                <div class="company-card" data-company="huddle">
+                    <div class="grid-image">
+                        <img src="images/huddle.jpg" alt="Huddle">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Huddle</h4>
+                        <p>₹50 cash in wallet on signup</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="trip.com">
+                    <div class="grid-image">
+                        <img src="images/trip.com.jpg" alt="Trip.com">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Trip.com</h4>
+                        <p>Exclusive travel discounts</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="swiggy">
+                    <div class="grid-image">
+                        <img src="images/swiggy.jpg" alt="Swiggy">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Swiggy</h4>
+                        <p>₹90 off + free delivery</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="eatclub">
+                    <div class="grid-image">
+                        <img src="images/eatclub.jpg" alt="Eat Club">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Eat Club</h4>
+                        <p>₹200 OFF first 3 orders</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="mudrex">
+                    <div class="grid-image">
+                        <img src="images/mudrex.jpg" alt="Mudrex">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Mudrex</h4>
+                        <p>₹200 bitcoin + 50% off fees</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="goibibo">
+                    <div class="grid-image">
+                        <img src="images/goibibo.jpg" alt="Goibibo">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Goibibo</h4>
+                        <p>₹150 gocash on booking</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="magic">
+                    <div class="grid-image">
+                        <img src="images/magicpin.jpg" alt="Magic Pin">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Magic Pin</h4>
+                        <p>Free delivery + discounts</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="airtel">
+                    <div class="grid-image">
+                        <img src="images/airtel.jpg" alt="Airtel">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Airtel</h4>
+                        <p>₹300 off on WiFi</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="kite">
+                    <div class="grid-image">
+                        <img src="images/kite.jpg" alt="Zerodha Kite">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Zerodha</h4>
+                        <p>Free account for 1 year</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="bhim">
+                    <div class="grid-image">
+                        <img src="images/bhim.jpg" alt="BHIM">
+                    </div>
+                    <div class="grid-text">
+                        <h4>BHIM</h4>
+                        <p>₹50 on signup</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="slider-button next">›</button>
+        </div>
+    </div>
+
+    <div class="hero-section2">
+        <h2>Finance & Payments</h2>
+        <p>Get rewards on financial services</p>
+        
+        <div class="Horizontal-slider">
+            <button class="slider-button prev">‹</button>
+            
+            <div class="slider-track">
+                <div class="company-card" data-company="phonepe">
+                    <div class="grid-image">
+                        <img src="images/phonepe.jpg" alt="PhonePe">
+                    </div>
+                    <div class="grid-text">
+                        <h4>PhonePe</h4>
+                        <p>Cashback on UPI payments</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="angleone">
+                    <div class="grid-image">
+                        <img src="images/angleone.jpg" alt="Angel One">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Angel One</h4>
+                        <p>No brokerage account</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="mudrex">
+                    <div class="grid-image">
+                        <img src="images/mudrex.jpg" alt="Mudrex">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Mudrex</h4>
+                        <p>Crypto investment bonus</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="cheq">
+                    <div class="grid-image">
+                        <img src="images/cheq.jpg" alt="Cheq">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Cheq</h4>
+                        <p>1% rewards on CC payments</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="IND">
+                    <div class="grid-image">
+                        <img src="images/indmoney.jpg" alt="IND Money">
+                    </div>
+                    <div class="grid-text">
+                        <h4>IND Money</h4>
+                        <p>₹150 on CC bill payment</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="stable">
+                    <div class="grid-image">
+                        <img src="images/stablemoney.jpg" alt="Stable Money">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Stable Money</h4>
+                        <p>₹200 Amazon voucher on FD</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="paytm">
+                    <div class="grid-image">
+                        <img src="images/paytm.jpg" alt="Paytm">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Paytm</h4>
+                        <p>Exclusive cashback coupons</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="tata">
+                    <div class="grid-image">
+                        <img src="images/tataneu.jpg" alt="Tata Neu">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Tata Neu</h4>
+                        <p>10% cashback on card</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="idfc">
+                    <div class="grid-image">
+                        <img src="images/idfc.jpg" alt="IDFC">
+                    </div>
+                    <div class="grid-text">
+                        <h4>IDFC Credit Card</h4>
+                        <p>₹250 cashback + free year</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="kite">
+                    <div class="grid-image">
+                        <img src="images/kite.jpg" alt="Zerodha Kite">
+                    </div>
+                    <div class="grid-text">
+                        <h4>Zerodha</h4>
+                        <p>Free trading account</p>
+                    </div>
+                </div>
+                
+                <div class="company-card" data-company="bhim">
+                    <div class="grid-image">
+                        <img src="images/bhim.jpg" alt="BHIM">
+                    </div>
+                    <div class="grid-text">
+                        <h4>BHIM</h4>
+                        <p>₹50 signup bonus</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="slider-button next">›</button>
+        </div>
+    </div>
+</section>
+    
+
+  <section class="steps-section">
+    <div class="section-curve-bottom"></div>
+    <h2 class="steps-title">Get started in <span class="highlight">3 easy steps</span></h2>
+    <div class="steps-container">
+            <div class="step-card">
+                <div class="step-icon">
+                    <span class="step-number">1</span>
+                    <img src="https://img.icons8.com/?size=100&id=13700&format=png&color=228BE6" alt="Post a Code" />
+                </div>
+                <h3>Post a Referral Code</h3>
+                <p>Tell us the referral code details in just 5-minutes.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">
+                    <span class="step-number">2</span>
+                    <img src="https://img.icons8.com/ios-filled/50/3a86ff/approval.png" alt="Get Verified" />
+                </div>
+                <h3>Get Verified</h3>
+                <p>Our team will verify your account.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">
+                    <span class="step-number">3</span>
+                    <img src="https://img.icons8.com/?size=100&id=trRxWTdrMj7v&format=png&color=000000" alt="Get Benefits" />
+                </div>
+                <h3>Get Referal <span class="highlight">Benefits</span></h3>
+                <p>
+                    You will get instant access to the referral benefits and can start sharing them with your friends.
+                </p>
+            </div>
+        </div>
+    </section>
+   <!-- Why WebReferrals Section -->
+<section class="usp-section">
+    <div class="section-curve-top"></div>
+    <div class="usp-container">
+        <h2 class="usp-title">Why Choose WebReferrals?</h2>
+        <div class="usp-grid">
+            <div class="usp-card">
+                <div class="usp-icon">🎁</div>
+                <h3>Premium Codes for Free</h3>
+                <p>Get exclusive referral codes normally reserved for premium members - no payments or subscriptions needed</p>
+            </div>
+            
+            <div class="usp-card">
+                <div class="usp-icon">✅</div>
+                <h3>100% Authentic</h3>
+                <p>Every referral is personally verified by our team to ensure working codes with maximum benefits</p>
+            </div>
+            
+            <div class="usp-card">
+                <div class="usp-icon">🚪</div>
+                <h3>No Login Required</h3>
+                <p>Instant access without creating accounts - just copy codes and start saving immediately</p>
+            </div>
+            
+            <div class="usp-card">
+                <div class="usp-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Newest referral codes updated daily so you never miss the best deals</p>
+            </div>
+        </div>
+        <a href="search-results.html">
+        <button class="usp-cta">Get Referrals Now</button>
+        </a>
+    </div>
+    <div class="usp-curve-bottom"></div>
+</section>
+   <section class="faq-section">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">How do I share my referrals? How can I change a referral?</button>
+            <div class="faq-answer">
+                <p>You can share referrals by copying the unique code from any company page. To change a referral, simply edit your submission in your account dashboard - all updates are reflected instantly across the platform.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Is it really free? How do you make money?</button>
+            <div class="faq-answer">
+                <p>Yes, WebReferrals is completely free for users. We earn commissions from partner companies when referrals result in successful conversions, allowing us to keep the service free.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What are Recommendations & Reviews? How are you different to a Promo code?</button>
+            <div class="faq-answer">
+                <p>Unlike generic promo codes, our referrals come with verified user recommendations and detailed reviews about their personal experience. This helps you choose the most valuable offers.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">I can't find the referral I am looking for, what can I do?</button>
+            <div class="faq-answer">
+                <p>Use our search feature or browse categories. If you still can't find it, request the referral through our contact form - we'll notify you when it becomes available.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Tell me about the browser extensions. How can I get referral rewards when shopping?</button>
+            <div class="faq-answer">
+                <p>Our browser extension automatically applies the best available referral codes at checkout. Install it from our Tools page to never miss savings opportunities.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">I want my code to appear further up the page. How can I do that?</button>
+            <div class="faq-answer">
+                <p>Higher placement is earned through positive user ratings and frequent usage. Share your referral link to get more clicks and naturally rise in rankings.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What are "clicks" next to my referrals?</button>
+            <div class="faq-answer">
+                <p>The click counter shows how many people have used your specific referral code. This helps track your referral's popularity and effectiveness.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+            <span class="footer-logo">WebReferrals</span>
+            <p class="footer-tagline">Share. Earn. Connect.</p>
+            </div>
+            <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Referees</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+            </nav>
+            <div class="footer-social">
+            <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/3a86ff/facebook-new.png" alt="Facebook"></a>
+            <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/3a86ff/instagram-new.png" alt="Instagram"></a>
+            <a href="#" aria-label="Twitter"><img src="https://img.icons8.com/ios-filled/24/3a86ff/twitter.png" alt="Twitter"></a>
+            <a href="#" aria-label="LinkedIn"><img src="https://img.icons8.com/ios-filled/24/3a86ff/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 WebReferrals. All rights reserved.</p>
+        </div>
+    </footer>   
+    </main>
+      <!-- Google Analytics -->
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M60XM378PP"></script>
+                    <script>
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+                      gtag('config', 'G-M60XM378PP');
+                    </script>
+                <script>
+                    document.getElementById('mainSearchForm').addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        const query = document.getElementById('mainSearchInput').value.trim();
+                        window.open(`search-results.html?q=${encodeURIComponent(query)}`, '_blank');
+                    });
+                </script>
+    <script src="scripts\script.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - WebReferrals</title>
+    <link rel="stylesheet" href="../styles/company-page.css">
+    <link rel="stylesheet" href="../styles/search-results.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Your Existing Navbar -->
+    <header>
+        <div class="container">
+            <h1 class="logo">WebReferrals</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown">
+                    <a href="../about-us/our-team.html">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../about-us/our-team.html">Our Team</a></li>
+                        <li><a href="../about-us/contact-us.html">Contact Us</a></li>
+                    </ul>
+        </li>
+                    <!-- <li><a href="#">Features</a></li> -->
+                    <!-- <li><a href="#">Categories</a></li> -->
+                    <!-- <li><a href="#">Referees</a></li> -->
+                     <li><a href="#">Blogs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Header -->
+    <div class="search-header">
+        <div class="container">
+            <form class="search-box" id="resultsSearchForm">
+                <input type="text" placeholder="Search for companies..." id="resultsSearchInput">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Results Content -->
+    <main class="search-results-container">
+        <!-- <aside class="filters-sidebar">
+            <div class="filter-section">
+                <h3>Delivery Options</h3>
+                <ul>
+                    <li><label><input type="checkbox"> Fast Delivery</label></li>
+                    <li><label><input type="checkbox"> Prime</label></li>
+                </ul>
+            </div>
+
+            <div class="filter-section">
+                <h3>Customer Reviews</h3>
+                <div class="rating-filter">
+                    <div class="rating-option"><span>★★★★★</span></div>
+                    <div class="rating-option"><span>★★★★☆</span> & up</div>
+                    <div class="rating-option"><span>★★★☆☆</span> & up</div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="price-slider">
+                    <input type="range" min="0" max="5000" value="2500">
+                    <div class="price-labels">
+                        <span>₹0</span>
+                        <span>₹5000+</span>
+                    </div>
+                </div>
+            </div>
+        </aside> -->
+
+        <div class="results-grid">
+            <div class="results-header">
+                <h2>Results for "<span id="searchQueryDisplay"></span>"</h2>
+                <p class="results-count"><span id="resultsCount">0</span> companies found</p>
+            </div>
+
+            <div class="grid-container" id="resultsGrid">
+                <!-- Results will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="../scripts/search-results.js"></script>
+</body>
+</html>

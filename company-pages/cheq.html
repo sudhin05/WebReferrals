@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cheq Referral</title>
+  <link rel="stylesheet" href="../styles/company-page.css" />
+</head>
+<body>
+ <header>
+     <div class="container">
+            <h1 class="logo">WebReferrals</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                    <a href="../about-us/our-team.html">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../about-us/our-team.html">Our Team</a></li>
+                        <li><a href="../about-us/contact-us.html">Contact Us</a></li>
+                    </ul>
+        </li>
+                    <!-- <li><a href="#">Features</a></li> -->
+                    <!-- <li><a href="#">Categories</a></li> -->
+                    <!-- <li><a href="#">Referees</a></li> -->
+                     <li><a href="#">Blogs</a></li>
+                </ul>
+            </nav>
+        </div>
+</header>
+
+  <main class="brand-container">
+    <div class="brand-info">
+      <div class="brand-text">
+        <h1>Cheq</h1>
+        <p>⚡Want to know my money-saving secret? I'm getting paid to pay my credit card bills!</p>
+      </div>
+      <div class="brand-logo">
+        <img src="../images/cheq.jpg" alt="Cheq Logo" />
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-left">
+        <div class="rating-value">4.9</div>
+        <div class="stars">
+          ★★★★&#x260E
+        </div>
+        <div class="short-desc">Trusted by 8k++ users</div>
+      </div>
+      <div class="divider"></div>
+      <div class="info-right">
+        <div class="verified">
+          <span class="checkmark">✔</span>
+          <span class="verified-text">Verified Publisher</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="referral-code-section">
+      <h3>Referral Code:</h3>
+      <div class="code-box">
+        <span id="code">https://app.cheq.one/3UIC/jk26oms5</span>
+        <button onclick="copyCode()">Copy</button>
+      </div>
+    </div>
+    <div class="how-to-use">
+      <h3>How to Use</h3>
+      <ol>
+       <li>Visit <a href="https://https://www.cheq.one" target="_blank">https://www.cheq.one</a></li>
+        <li>Sign up using your email or phone number</li>
+        <li>Enter referral code <strong>https://app.cheq.one/3UIC/jk26oms5</strong> during checkout</li>
+      </ol>
+    </div>
+  
+                
+<section class="related-referrals">
+  <h3>More in Financial Services</h3>
+  <div class="related-slider">
+    <button class="slider-button prev">‹</button>
+    <div class="slider-track">
+      
+<div class="related-company-card" onclick="window.location.href='IND.html'">
+  <div class="related-logo">
+    <img src="../images/indmoney.jpg" alt="IND Money">
+  </div>
+  <div class="related-info">
+    <h4>IND Money</h4>
+    <p class="related-offer">earn cashback up to ₹150 on your first credit card bill payment</p>
+  </div>
+</div>
+
+<div class="related-company-card" onclick="window.location.href='tata.html'">
+  <div class="related-logo">
+    <img src="../images/tataneu.jpg" alt="Tata Neu card">
+  </div>
+  <div class="related-info">
+    <h4>Tata Neu card</h4>
+    <p class="related-offer">get your tata neu card for first year and earn cashback upto 10%</p>
+  </div>
+</div>
+
+<div class="related-company-card" onclick="window.location.href='idfc.html'">
+  <div class="related-logo">
+    <img src="../images/idfc.jpg" alt="Idfc Credit CARD">
+  </div>
+  <div class="related-info">
+    <h4>Idfc Credit CARD</h4>
+    <p class="related-offer">get ₹250 cashback points and free fist year on selected cards</p>
+  </div>
+</div>
+
+    </div>
+    <button class="slider-button next">›</button>
+  </div>
+</section>
+
+<style>
+  .related-referrals {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+  }
+  .related-referrals h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2b2d42;
+  }
+  /* Reuse your existing slider styles */
+</style>
+
+
+
+
+        
+            </main>
+
+  <script>
+    function copyCode() {
+      const code = document.getElementById('code').textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        alert('Referral code copied: ' + code);
+      });
+    }
+       document.querySelectorAll('.related-slider').forEach(slider => {
+    const track = slider.querySelector('.slider-track');
+    const prev = slider.querySelector('.prev');
+    const next = slider.querySelector('.next');
+    
+    prev.addEventListener('click', () => {
+      track.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+    
+    next.addEventListener('click', () => {
+      track.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+  });
+  </script>
+ 
+  
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Magic Pin Referral</title>
+  <link rel="stylesheet" href="../styles/company-page.css" />
+</head>
+<body>
+ <header>
+     <div class="container">
+            <h1 class="logo">WebReferrals</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                    <a href="../about-us/our-team.html">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../about-us/our-team.html">Our Team</a></li>
+                        <li><a href="../about-us/contact-us.html">Contact Us</a></li>
+                    </ul>
+        </li>
+                    <!-- <li><a href="#">Features</a></li> -->
+                    <!-- <li><a href="#">Categories</a></li> -->
+                    <!-- <li><a href="#">Referees</a></li> -->
+                     <li><a href="#">Blogs</a></li>
+                </ul>
+            </nav>
+        </div>
+</header>
+
+  <main class="brand-container">
+    <div class="brand-info">
+      <div class="brand-text">
+        <h1>Magic Pin</h1>
+        <p>Magicpin is a local discovery and savings app that rewards users for shopping, dining, and exploring nearby stores.</p>
+      </div>
+      <div class="brand-logo">
+        <img src="../images/magicpin.jpg" alt="Magic Pin Logo" />
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-left">
+        <div class="rating-value">4.7</div>
+        <div class="stars">
+          ★★★★&#x260E
+        </div>
+        <div class="short-desc">Trusted by 10k++ users</div>
+      </div>
+      <div class="divider"></div>
+      <div class="info-right">
+        <div class="verified">
+          <span class="checkmark">✔</span>
+          <span class="verified-text">Verified Publisher</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="referral-code-section">
+      <h3>Referral Code:</h3>
+      <div class="code-box">
+        <span id="code">STYV8393</span>
+        <button onclick="copyCode()">Copy</button>
+      </div>
+    </div>
+    <div class="how-to-use">
+      <h3>How to Use</h3>
+      <ol>
+       <li>Visit <a href="https://https://magicpin.in" target="_blank">https://magicpin.in</a></li>
+        <li>Sign up using your email or phone number</li>
+        <li>Enter referral code <strong>STYV8393</strong> during checkout</li>
+      </ol>
+    </div>
+  
+                
+<section class="related-referrals">
+  <h3>More in Shopping & Rewards</h3>
+  <div class="related-slider">
+    <button class="slider-button prev">‹</button>
+    <div class="slider-track">
+      
+    </div>
+    <button class="slider-button next">›</button>
+  </div>
+</section>
+
+<style>
+  .related-referrals {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+  }
+  .related-referrals h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2b2d42;
+  }
+  /* Reuse your existing slider styles */
+</style>
+
+
+
+
+        
+            </main>
+
+  <script>
+    function copyCode() {
+      const code = document.getElementById('code').textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        alert('Referral code copied: ' + code);
+      });
+    }
+       document.querySelectorAll('.related-slider').forEach(slider => {
+    const track = slider.querySelector('.slider-track');
+    const prev = slider.querySelector('.prev');
+    const next = slider.querySelector('.next');
+    
+    prev.addEventListener('click', () => {
+      track.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+    
+    next.addEventListener('click', () => {
+      track.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+  });
+  </script>
+ 
+  
+</body>
+
+</html>

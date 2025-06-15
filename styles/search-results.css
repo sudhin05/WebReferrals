@@ -1,0 +1,293 @@
+/* Main Layout */
+
+.search-header{
+    align-items: center;
+}
+.search-box {
+    display: flex;
+    max-width: 5100px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+    flex: 1;
+    height: 50px;
+    align-self: center;
+    /* align-items: center; */
+    /* width: ; */
+    border: none;
+    border-radius: 8px 0 0 8px;
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.search-box button {
+    
+    width: 120px;
+    height: 75px;
+    border: none;
+    align-self: center;
+     font-size: 16px;
+    border-radius: 0 8px 8px 0;
+    background-color: #3a86ff;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 0 20px;
+}
+
+.search-box button:hover {
+    background-color: #2667cc;
+}
+
+.search-results-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.search-header {
+    background: #f5f5f5;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Filters Sidebar
+.filters-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.filter-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.filter-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.filter-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-section li {
+    margin-bottom: 10px;
+}
+
+.filter-section label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filter-section input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.rating-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rating-option {
+    color: #FFA41C;
+    cursor: pointer;
+}
+
+.price-slider {
+    padding: 0 10px;
+}
+
+.price-slider input {
+    width: 100%;
+}
+
+.price-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #555;
+} */
+
+/* Results Grid */
+.results-grid {
+    flex: 1;
+}
+
+.results-header {
+    margin-bottom: 20px;
+}
+
+.results-header h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #333;
+}
+
+.results-count {
+    color: #666;
+    font-size: 14px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Company Card - Updated to match your theme */
+.company-result-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.company-result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.company-logo {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.company-logo img {
+    max-width: 120px;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.company-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2b2d42;
+}
+
+.company-offer {
+    color: #3a86ff;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.company-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.company-rating {
+    color: #FFA41C;
+    margin-bottom: 10px;
+}
+
+.view-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #3a86ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.view-button:hover {
+    background: #2667cc;
+}
+
+/* Search Box Container */
+.search-box-container {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Search Box Styling */
+.search-box {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* Centers the search box */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd; /* Added border for better visibility */
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  min-width: 0; /* Fixes flexbox overflow issues */
+}
+
+.search-box button {
+  padding: 0 25px;
+  background: #3a86ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap; /* Prevents button text wrapping */
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .search-results-container {
+        flex-direction: column;
+    }
+    
+    /* .filters-sidebar {
+        width: 100%;
+        order: 2;
+    } */
+  .search-box-container {
+    padding: 0 15px;
+  }
+  
+  .search-box {
+    flex-direction: column;
+    box-shadow: none;
+    border: none;
+    gap: 10px;
+  }
+  
+  .search-box input {
+    padding-left: 40px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 0;
+  }
+  
+  .search-box button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - WebReferrals</title>
+    <link rel="stylesheet" href="../styles/indexPage.css">
+    <style>
+        .team-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .team-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid #3a86ff;
+        }
+        
+        .member-name {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #2b2d42;
+        }
+        
+        .member-position {
+            color: #3a86ff;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .member-bio {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">WebReferrals</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="our-team.html">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="our-team.html">Our Team</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="#">Categories</a></li>
+                    <li><a href="#">Referees</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="team-container">
+        <div class="team-header">
+            <h1>Our Team</h1>
+            <p class="subtitle">Meet the people behind WebReferrals</p>
+        </div>
+        
+       <div class="team-members">
+    <div class="team-member">
+        <img src="../images/team-nikhil.jpg" alt="Nikhil Surana" class="member-photo">
+        <h2 class="member-name">Nikhil Surana</h2>
+        <p class="member-position">Tech Head</p>
+        <p class="member-bio">
+            Nikhil is the driving force behind WebReferrals' technical innovation. With expertise spanning full-stack development, machine learning, and systems architecture, he ensures our platform is scalable, fast, and user-friendly. A constant learner and problem solver, Nikhil leads our technical roadmap and product vision with clarity and precision.
+        </p>
+    </div>
+
+    <div class="team-member">
+        <img src="../images/team-pai.jpg" alt="Pai" class="member-photo">
+        <h2 class="member-name">Pai</h2>
+        <p class="member-position">Tech Head</p>
+        <p class="member-bio">
+            Pai brings a strong foundation in backend systems, API design, and frontend optimization. He works alongside Nikhil to build and refine the core functionality of WebReferrals, ensuring every feature is fast, reliable, and intuitive. With deep attention to detail and clean coding practices, Pai plays a critical role in building the technology that powers our referral ecosystem.
+        </p>
+    </div>
+
+    <div class="team-member">
+        <img src="../images/team-uday.jpg" alt="Uday" class="member-photo">
+        <h2 class="member-name">Uday kuchhal</h2>
+        <p class="member-position">Market Research & Strategy</p>
+        <p class="member-bio">
+            Uday leads our market research, identifying trends, user behavior patterns, and growth opportunities. His data-driven insights inform strategic decisions that help shape the platform’s direction. Whether it's competitor analysis or user preference mapping, Uday ensures WebReferrals is always aligned with what the market demands.
+        </p>
+    </div>
+</div>
+
+    </main>
+</body>
+</html>
